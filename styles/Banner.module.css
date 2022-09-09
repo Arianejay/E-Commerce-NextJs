@@ -1,0 +1,11 @@
+/* container */
+.banner__container {
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), #efefef),
+    url('../assets/skateboard.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
