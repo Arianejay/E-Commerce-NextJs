@@ -5,13 +5,10 @@ import React from 'react'
 import styles from '../styles/Banner.module.css'
 import Nike from '../assets/nike.png'
 
-// types
-import { Image } from '../types/image'
-
-const Banner: React.FC<Image> = () => {
+const Banner: React.FC = () => {
   return (
     <div className={styles.banner__container}>
-      <img src={Nike} alt="" />
+      <h1>Shoe Mania</h1>
     </div>
   )
 }

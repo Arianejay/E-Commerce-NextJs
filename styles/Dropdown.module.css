@@ -9,6 +9,7 @@
   height: 50vh;
   border-bottom: 1px solid var(--border);
   z-index: 2;
+  background: #fff;
 }
 
 /* links */

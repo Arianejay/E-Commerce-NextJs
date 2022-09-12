@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Noto Sans TC, Barlow, Roboto Condensed, sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-weight: 400;
 }
 
@@ -16,10 +16,10 @@ a {
 }
 
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Noto+Sans+TC:wght@400;500&family=Roboto+Condensed:wght@300&display=swap');
 /* font-family: 'Barlow', sans-serif;
 font-family: 'Noto Sans TC', sans-serif;
-font-family: 'Roboto Condensed', sans-serif; */
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Marck Script', cursive; */
 
 /* colors */
 :root {
