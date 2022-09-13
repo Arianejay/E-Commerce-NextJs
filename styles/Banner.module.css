@@ -20,3 +20,11 @@
     3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc,
     5px 6px 1px #eee, 7px 6px 1px #ccc;
 }
+
+/* media queries */
+@media screen and (max-width: 767px) {
+  /* text */
+  .banner__container h1 {
+    font-size: 4rem;
+  }
+}
