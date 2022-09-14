@@ -10,7 +10,24 @@ import { client, urlFor } from '../../lib/client'
 
 // types
 import { IDropped } from '../../types/dropped'
+
+// imports
 import { IProduct } from '../../types/product'
+
+// select library
+import Select from 'react-select'
+import Product from '../../components/Product'
+const options = [
+  { value: '7.5', label: '7.5' },
+  { value: '8', label: '8' },
+  { value: '8.5', label: '8.5' },
+  { value: '9', label: '9' },
+  { value: '9.5', label: '9.5' },
+  { value: '10', label: '10' },
+  { value: '10.5', label: '10.5' },
+  { value: '11', label: '11' },
+  { value: '11.5', label: '11.5' },
+]
 
 const ProductDetails: React.FC<IDropped & IProduct> = ({
   droppedProducts,
@@ -33,10 +50,12 @@ const ProductDetails: React.FC<IDropped & IProduct> = ({
 
   return (
     <div className={styles.slug__container}>
+      {/* heading */}
       <div className={styles.slug__heading}>
         <h2>{name}</h2>
         <p>{releaseDate}</p>
       </div>
+      {/* image */}
       <div className={styles.slug__image}>
         <div className={styles.slug__bigImage}>
           <img src={urlFor(image && image[index]).url()} />
@@ -51,6 +70,39 @@ const ProductDetails: React.FC<IDropped & IProduct> = ({
             />
           ))}
         </div>
+      </div>
+      {/* buttons */}
+      <div className={styles.slug__button}>
+        <button>Buy Now for ${price}</button>
+        <Select className={styles.selectData} options={options} />
+      </div>
+      {/* details */}
+      <div className={styles.slug__details}>
+        <div className={styles.slug__table}>
+          <table>
+            <tr>
+              <td>Name</td>
+              <td>{name}</td>
+            </tr>
+            <tr>
+              <td>Colorway</td>
+              <td>{colorway}</td>
+            </tr>
+            <tr>
+              <td>Release Date</td>
+              <td>{releaseDate}</td>
+            </tr>
+            <tr>
+              <td>Style Code</td>
+              <td>{styleCode}</td>
+            </tr>
+            <tr>
+              <td>Retail Price</td>
+              <td>${retailPrice}</td>
+            </tr>
+          </table>
+        </div>
+        <div className={styles.slug__description}>{details}</div>
       </div>
     </div>
   )

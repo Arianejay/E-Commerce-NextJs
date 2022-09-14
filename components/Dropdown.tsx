@@ -1,5 +1,6 @@
 // next and react
 import React from 'react'
+import Link from 'next/link'
 
 // css
 import styles from '../styles/Dropdown.module.css'
@@ -17,12 +18,17 @@ const Dropdown: React.FC<Props> = ({ isOpen }) => {
       style={isOpen ? { display: 'flex' } : { display: 'none' }}
     >
       <div className={styles.dropdown__links}>
-        <span>Products</span>
-        <span>Featured</span>
-        <span>About</span>
+        <Link passHref href={'/products'}>
+          <span>Products</span>
+        </Link>
+        <Link passHref href={'/about'}>
+          <span>About</span>
+        </Link>
       </div>
       <div className={stylesNav.dropdown__cart}>
-        <BsCart />
+        <Link passHref href={'/cart'}>
+          <BsCart />
+        </Link>
         <span className={stylesNav.dropdown__cart__qty}>2</span>
       </div>
     </div>

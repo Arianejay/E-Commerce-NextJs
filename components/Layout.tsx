@@ -4,6 +4,7 @@ import React, { ReactNode } from 'react'
 
 // imports
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 interface Props {
   children: ReactNode
@@ -20,10 +21,13 @@ const Layout: React.FC<Props> = ({ children }) => {
           rel="stylesheet"
         />
       </Head>
-      <header>
+      <header style={{ position: 'sticky', top: '0', zIndex: '2' }}>
         <Navbar />
       </header>
       <main>{children}</main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

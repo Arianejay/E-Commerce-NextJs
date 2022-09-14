@@ -1,0 +1,81 @@
+/* container */
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 5rem;
+}
+
+/* heading */
+.cart__heading h2 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* content */
+.cart__content {
+  display: flex;
+  width: 100%;
+}
+
+/* content left */
+.cart__left {
+  width: 60%;
+  background: blue;
+}
+
+/* content right */
+.cart__right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.cart__right p {
+  opacity: 0.5;
+}
+.right__input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: red;
+}
+.right__input input {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  outline: none;
+  border: 1px solid var(--border);
+}
+.right__input input::placeholder {
+  opacity: 0.5;
+}
+.right__input button {
+  width: 80%;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.cart__right table {
+  width: 100%;
+}
+.cart__right tr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  width: 100%;
+}
+.checkout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.checkout button {
+}

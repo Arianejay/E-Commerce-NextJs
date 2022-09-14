@@ -1,0 +1,23 @@
+/* container */
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 4rem;
+  border-top: 1px solid var(--border);
+}
+
+/* context */
+.footer__container p {
+  font-size: 0.8rem;
+}
+
+/* icon */
+.github {
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.github:hover {
+  color: var(--red);
+}

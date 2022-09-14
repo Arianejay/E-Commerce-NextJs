@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 // css
 import styles from '../styles/Navbar.module.css'
 import { BsCart } from 'react-icons/bs'
-import {TbSkateboard} from "react-icons/tb"
+import { TbSkateboard } from 'react-icons/tb'
 import { Spiral as Hamburger } from 'hamburger-react'
 import Dropdown from './Dropdown'
 
@@ -24,13 +24,18 @@ const Navbar: React.FC = () => {
         <div className={styles.navbar__right}>
           <div className={styles.navbar__links}>
             <ul>
-              <li>Products</li>
-              <li>Featured</li>
-              <li>About</li>
+              <Link passHref href={'/products'}>
+                <li>Products</li>
+              </Link>
+              <Link passHref href={'/about'}>
+                <li>About</li>
+              </Link>
             </ul>
           </div>
           <div className={styles.navbar__cart}>
-            <BsCart />
+            <Link passHref href={'/cart'}>
+              <BsCart />
+            </Link>
             <span className={styles.cart__qty}>2</span>
           </div>
         </div>

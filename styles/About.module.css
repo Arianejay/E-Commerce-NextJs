@@ -1,0 +1,20 @@
+/* container */
+.about__container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 5rem;
+}
+
+/* heading */
+.about__heading h2 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* context */
+.firstParagraph::first-letter {
+  margin-left: 2rem;
+}
+.about__context p {
+  text-align: justify;
+}
