@@ -22,7 +22,7 @@ font-family: 'Marck Script', cursive; */
 
 /* colors */
 :root {
-  --gray: #5f6f94;
   --red: #d2001a;
+  --blue: #1363df;
   --border: #efefef;
 }
