@@ -1,7 +1,11 @@
+import { IProduct } from './product'
+
 export interface IContext {
-  cartItems: Array<string>
+  cartItems: Array<IProduct>
   totalPrice: number
   totalQuantities: number
   qty: number
-  incQty: function
+  incQty: any
+  decQty: any
+  onAdd: any
 }

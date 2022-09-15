@@ -1,4 +1,10 @@
+import { ReactNode } from 'react'
+
 export interface IProduct {
+  price: ReactNode
+  colorway: ReactNode
+  name: ReactNode
+  image: any
   product: {
     _id: string
     image: Array<string>
