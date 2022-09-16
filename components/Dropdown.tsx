@@ -7,11 +7,17 @@ import styles from '../styles/Dropdown.module.css'
 import stylesNav from '../styles/Navbar.module.css'
 import { BsCart } from 'react-icons/bs'
 
+// context
+import { useStateContext } from '../context/StateContext'
+
 interface Props {
   isOpen: boolean
 }
 
 const Dropdown: React.FC<Props> = ({ isOpen }) => {
+  // context
+  const { totalQuantities } = useStateContext()
+
   return (
     <div
       className={styles.dropdown__container}
@@ -26,10 +32,10 @@ const Dropdown: React.FC<Props> = ({ isOpen }) => {
         </Link>
       </div>
       <div className={stylesNav.dropdown__cart}>
-        <Link passHref href={'/cart'}>
+        <Link href={'/cart'}>
           <BsCart />
         </Link>
-        <span className={stylesNav.dropdown__cart__qty}>2</span>
+        <span className={stylesNav.dropdown__cart__qty}>{totalQuantities}</span>
       </div>
     </div>
   )

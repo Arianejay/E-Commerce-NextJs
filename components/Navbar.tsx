@@ -7,11 +7,19 @@ import styles from '../styles/Navbar.module.css'
 import { BsCart } from 'react-icons/bs'
 import { TbSkateboard } from 'react-icons/tb'
 import { Spiral as Hamburger } from 'hamburger-react'
+
+// imports
 import Dropdown from './Dropdown'
+
+// context
+import { useStateContext } from '../context/StateContext'
 
 const Navbar: React.FC = () => {
   // state
   const [isOpen, setOpen] = useState<boolean>(false)
+
+  // context
+  const { totalQuantities } = useStateContext()
 
   return (
     <>
@@ -36,7 +44,7 @@ const Navbar: React.FC = () => {
             <Link passHref href={'/cart'}>
               <BsCart />
             </Link>
-            <span className={styles.cart__qty}>2</span>
+            <span className={styles.cart__qty}>{totalQuantities}</span>
           </div>
         </div>
         <div className={styles.hamburger}>

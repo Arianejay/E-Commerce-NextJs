@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 
 // css
 import styles from '../../styles/Slug.module.css'
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai'
 
 // lib
 import { client, urlFor } from '../../lib/client'
@@ -16,20 +17,6 @@ import { IProduct } from '../../types/product'
 
 // context
 import { useStateContext } from '../../context/StateContext'
-
-// select library
-import Select from 'react-select'
-const options = [
-  { value: '7.5', label: '7.5' },
-  { value: '8', label: '8' },
-  { value: '8.5', label: '8.5' },
-  { value: '9', label: '9' },
-  { value: '9.5', label: '9.5' },
-  { value: '10', label: '10' },
-  { value: '10.5', label: '10.5' },
-  { value: '11', label: '11' },
-  { value: '11.5', label: '11.5' },
-]
 
 const ProductDetails: React.FC<IDropped & IProduct> = ({
   droppedProducts,
@@ -51,7 +38,7 @@ const ProductDetails: React.FC<IDropped & IProduct> = ({
   const [index, setIndex] = useState(0)
 
   // context
-  const { onAdd } = useStateContext()
+  const { onAdd, qty, incQty, decQty } = useStateContext()
 
   return (
     <div className={styles.slug__container}>
@@ -78,8 +65,14 @@ const ProductDetails: React.FC<IDropped & IProduct> = ({
       </div>
       {/* buttons */}
       <div className={styles.slug__button}>
-        <button onClick={() => onAdd(product)}>Buy Now for ${price}</button>
-        <Select className={styles.selectData} options={options} />
+        <button onClick={() => onAdd(product, qty)}>
+          Buy Now for ${price}
+        </button>
+        <div className={styles.slug__arrows}>
+          <AiFillCaretUp style={{ cursor: 'pointer' }} onClick={incQty} />
+          {qty}
+          <AiFillCaretDown style={{ cursor: 'pointer' }} onClick={decQty} />
+        </div>
       </div>
       {/* details */}
       <div className={styles.slug__details}>

@@ -1,9 +1,11 @@
 import { ReactNode } from 'react'
 
 export interface IProduct {
-  price: ReactNode
-  colorway: ReactNode
-  name: ReactNode
+  quantity: number
+  _id: string
+  price: number
+  colorway: string
+  name: string
   image: any
   product: {
     _id: string

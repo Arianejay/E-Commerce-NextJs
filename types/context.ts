@@ -7,5 +7,7 @@ export interface IContext {
   qty: number
   incQty: any
   decQty: any
-  onAdd: any
+  onAdd: Function
+  onRemove: Function
+  toggleQty: Function
 }

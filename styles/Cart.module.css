@@ -24,6 +24,7 @@
 }
 .left__card {
   display: flex;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--border);
 }
 .left__right {
@@ -31,9 +32,16 @@
   justify-content: space-between;
   width: 100%;
 }
+.left__name {
+  width: 50%;
+  margin-left: 0.5rem;
+}
 .title {
   margin-bottom: 0.5rem;
   font-weight: bold;
+}
+.text {
+  font-size: 0.9rem;
 }
 .left__qty {
   display: flex;
@@ -43,10 +51,10 @@
 .qty__div {
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
 }
 .upArrow,
 .downArrow {
-  font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -55,6 +63,10 @@
 }
 .downArrow:active {
   color: var(--red);
+}
+.selectData {
+  margin-left: 0.5rem;
+  width: 7rem;
 }
 .left__total {
   display: flex;
@@ -129,10 +141,10 @@
 }
 
 /* media queries */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   /* container */
   .cart__container {
-    margin: 4rem 1rem;
+    margin: 2rem 1rem;
   }
 
   /* content left and right */

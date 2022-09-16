@@ -18,3 +18,10 @@
 .about__context p {
   text-align: justify;
 }
+/* media queries */
+@media screen and (max-width: 767px) {
+  /* container */
+  .about__container {
+    margin: 2rem 1rem;
+  }
+}
