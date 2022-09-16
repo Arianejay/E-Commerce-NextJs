@@ -1,5 +1,6 @@
 // next and react
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 // css
@@ -50,13 +51,14 @@ const ProductDetails: React.FC<IDropped & IProduct> = ({
       {/* image */}
       <div className={styles.slug__image}>
         <div className={styles.slug__bigImage}>
-          <img src={urlFor(image && image[index]).url()} />
+          <Image src={urlFor(image && image[index]).url()} alt="img" />
         </div>
         <div className={styles.slug__smallImage}>
           {image?.map((item, i) => (
-            <img
+            <Image
               src={urlFor(item).url()}
               key={i}
+              alt="image"
               className={i === index ? styles.selected : ''}
               onMouseEnter={() => setIndex(i)}
             />

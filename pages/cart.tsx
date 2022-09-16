@@ -1,5 +1,6 @@
 // next and react
 import React from 'react'
+import Image from 'next/image'
 
 // css
 import styles from '../styles/Cart.module.css'
@@ -46,11 +47,12 @@ const Cart: React.FC = () => {
           {/* left content */}
           <div className={styles.cart__left}>
             {cartItems.map((item) => (
-              <div className={styles.left__card}>
-                <img
+              <div className={styles.left__card} key={item._id}>
+                <Image
                   src={urlFor(item?.image[0]).url()}
                   width={125}
                   height={85}
+                  alt="img"
                 />
                 <div className={styles.left__right}>
                   <div className={styles.left__name}>

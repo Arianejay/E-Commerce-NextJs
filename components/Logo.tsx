@@ -7,7 +7,7 @@ import styles from '../styles/Logo.module.css'
 const Logo = () => {
   return (
     <div className={styles.logo__container}>
-      <span>"This is why we play."</span>
+      <span>&quot;This is why we play.&quot;</span>
     </div>
   )
 }

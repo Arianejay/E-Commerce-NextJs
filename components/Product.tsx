@@ -1,5 +1,6 @@
 // next and react
 import React from 'react'
+import Image from 'next/image'
 
 // css
 import styles from '../styles/Product.module.css'
@@ -19,7 +20,12 @@ const Product: React.FC<IProduct> = ({ product }) => {
   return (
     <Link passHref href={`product/${current}`}>
       <div className={styles.card}>
-        <img src={urlFor(image && image[0]).url()} width={275} height={225} />
+        <Image
+          src={urlFor(image && image[0]).url()}
+          width={275}
+          height={225}
+          alt="img"
+        />
         <p>{name}</p>
       </div>
     </Link>
