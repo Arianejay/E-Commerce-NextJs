@@ -1,3 +1,67 @@
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: Table of Contents
+
+- [About the Project](#star2-about-the-project)
+  * [Screenshots](#camera-screenshots)
+  * [Tech Stack](#space_invader-tech-stack)
+  * [Features](#dart-features)
+- [Roadmap](#compass-roadmap)
+- [Acknowledgements](#gem-acknowledgements)
+
+  
+
+<!-- About the Project -->
+## :star2: About the Project
+Shoe Mania is an E-Commerce Project built with Next.Js and Sanity.io
+
+<!-- Screenshots -->
+### :camera: Screenshots
+
+<div align="center"> 
+  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+</div>
+
+
+<!-- TechStack -->
+### :space_invader: Tech Stack
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://nextjs.org/">Next.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.sanity.io/">Sanity.io</a></li>
+  </ul>
+</details>
+
+
+<!-- Features -->
+### :dart: Features
+
+- Featured products 
+- Just drop products
+- Add to cart
+- Toggle cart/product quantity
+
+
+<!-- Roadmap -->
+## :compass: Roadmap
+
+* [ ] Mobile application
+* [ ] Login and register functionality
+* [ ] Add more products
+
+
+<!-- Acknowledgments -->
+## :gem: Acknowledgements
+
+- Design is inspired by Kicks On Fire. Link to the website: https://www.kicksonfire.com/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
