@@ -12,7 +12,7 @@ const Context = createContext({} as IContext)
 
 export const useStateContext = () => useContext(Context)
 
-export const StateContext: React.FC = ({ children }: any) => {
+export const StateContext = ({ children }: any) => {
   const [cartItems, setCartItems] = useState<Array<IProduct | any>>([])
   const [totalPrice, setTotalPrice] = useState<number>(0)
   const [totalQuantities, setTotalQuantities] = useState<number>(0)
