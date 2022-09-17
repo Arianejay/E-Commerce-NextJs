@@ -22,7 +22,16 @@ const Products: React.FC<IProducts> = ({ products }) => {
       </div>
       <div className={styles.product__body}>
         {products?.map((product) => (
-          <Product key={product._id} product={product} />
+          <Product
+            key={product._id}
+            product={product}
+            quantity={0}
+            _id={''}
+            price={0}
+            colorway={''}
+            name={''}
+            image={undefined}
+          />
         ))}
       </div>
     </div>
