@@ -26,3 +26,11 @@ font-family: 'Marck Script', cursive; */
   --blue: #1363df;
   --border: #efefef;
 }
+
+/* loader */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

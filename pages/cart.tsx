@@ -50,7 +50,7 @@ const Cart: React.FC = () => {
               <div className={styles.left__card} key={item._id}>
                 <Image
                   src={urlFor(item?.image[0]).url()}
-                  width={125}
+                  width={200}
                   height={85}
                   alt="img"
                 />

@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
 // next and react
 import type { GetServerSideProps, NextPage } from 'next'
-import Head from 'next/head'
+import { useState } from 'react'
+import Image from 'next/image'
 
 // components
 import Banner from '../components/Banner'
@@ -9,6 +11,7 @@ import Logo from '../components/Logo'
 
 // css
 import styles from '../styles/Product.module.css'
+import loader from '../assets/loader.gif'
 
 // lib
 import { client } from '../lib/client'
@@ -23,50 +26,54 @@ const Home: NextPage<IFeatured & IDropped> = ({
 }) => {
   return (
     <>
-      <Banner />
-      <Logo />
-
-      {/* featured products */}
-      <div className={styles.product__container}>
-        <div className={styles.product__header}>
-          <h2>Featured</h2>
+      {!featuredProducts && !droppedProducts ? (
+        <div className="loader">
+          <Image src={loader} height={80} width={80} />
         </div>
-        <div className={styles.product__body}>
-          {featuredProducts?.map((product) => (
-            <Product
-              key={product._id}
-              product={product}
-              quantity={0}
-              _id={''}
-              price={0}
-              colorway={''}
-              name={''}
-              image={undefined}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* just dropped products */}
-      <div className={styles.product__container}>
-        <div className={styles.product__header}>
-          <h2>Just Dropped</h2>
-        </div>
-        <div className={styles.product__body}>
-          {droppedProducts?.map((product) => (
-            <Product
-              key={product._id}
-              product={product}
-              quantity={0}
-              _id={''}
-              price={0}
-              colorway={''}
-              name={''}
-              image={undefined}
-            />
-          ))}
-        </div>
-      </div>
+      ) : (
+        <>
+          <Banner />
+          <Logo />
+          <div className={styles.product__container}>
+            <div className={styles.product__header}>
+              <h2>Featured</h2>
+            </div>
+            <div className={styles.product__body}>
+              {featuredProducts?.map((product) => (
+                <Product
+                  key={product._id}
+                  product={product}
+                  quantity={0}
+                  _id={''}
+                  price={0}
+                  colorway={''}
+                  name={''}
+                  image={undefined}
+                />
+              ))}
+            </div>
+          </div>
+          <div className={styles.product__container}>
+            <div className={styles.product__header}>
+              <h2>Just Dropped</h2>
+            </div>
+            <div className={styles.product__body}>
+              {droppedProducts?.map((product) => (
+                <Product
+                  key={product._id}
+                  product={product}
+                  quantity={0}
+                  _id={''}
+                  price={0}
+                  colorway={''}
+                  name={''}
+                  image={undefined}
+                />
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </>
   )
 }
