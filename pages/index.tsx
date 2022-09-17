@@ -33,7 +33,16 @@ const Home: NextPage<IFeatured & IDropped> = ({
         </div>
         <div className={styles.product__body}>
           {featuredProducts?.map((product) => (
-            <Product key={product._id} product={product} />
+            <Product
+              key={product._id}
+              product={product}
+              quantity={0}
+              _id={''}
+              price={0}
+              colorway={''}
+              name={''}
+              image={undefined}
+            />
           ))}
         </div>
       </div>
@@ -45,7 +54,16 @@ const Home: NextPage<IFeatured & IDropped> = ({
         </div>
         <div className={styles.product__body}>
           {droppedProducts?.map((product) => (
-            <Product key={product._id} product={product} />
+            <Product
+              key={product._id}
+              product={product}
+              quantity={0}
+              _id={''}
+              price={0}
+              colorway={''}
+              name={''}
+              image={undefined}
+            />
           ))}
         </div>
       </div>
