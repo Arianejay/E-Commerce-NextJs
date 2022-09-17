@@ -14,6 +14,8 @@
 ## :star2: About the Project
 Shoe Mania is an E-Commerce Project built with Next.Js and Sanity.io
 
+Demo: https://e-commerce-next-js-sand.vercel.app/
+
 <!-- Screenshots -->
 ### :camera: Screenshots
 
