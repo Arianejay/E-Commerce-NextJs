@@ -20,7 +20,10 @@ Demo: https://e-commerce-next-js-sand.vercel.app/
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/103638111/198287925-fe5e2fb9-eb7d-4f54-a457-bdebecfbb53f.png" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/103638111/198288111-f7dd5b48-cee7-43a9-87bd-1e00c7545610.png" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/103638111/198288208-e34846ce-2668-413a-a68e-08bda4f20ab9.png" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/103638111/198288302-ee811ccd-cd14-4bd6-8798-454289d887e5.png" alt="screenshot" />
 </div>
 
 
